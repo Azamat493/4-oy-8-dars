@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1><i class="fas fa-tasks"></i>To-Do List</h1>
+      </div>
+
+      <div class="input-section">
+        <input type="text" id="todoInput" placeholder="Добавить задачу..." />
+        <button id="addBtn"><i class="fas fa-plus"></i> Добавить</button>
+      </div>
+
+      <div class="filter-section">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="active">Активные</button>
+        <button class="filter-btn" data-filter="completed">Выполненные</button>
+      </div>
+
+      <div class="todo-list" id="todoList">
+        <div class="empty-state">
+          <i class="fas fa-clipboard-list"></i>
+          <p>Пока задач нет — добавь первую.</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <span id="totalTasks">Всего: 0 задач</span>
+        <span id="completedTasks">Выполнено: 0</span>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
